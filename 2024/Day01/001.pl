@@ -1,7 +1,7 @@
 
 :- use_module( library( pure_input)). % phrase_from_file
 :- use_module( library( dcg/basics)). % integer, whites
-:- use_module( library( dcg/high_order)).
+:- use_module( library( dcg/high_order)). % sequence
 
 line_of_digits( ( A, B) ) --> integer(A), whites, integer(B), `\n`.
 list_of_lines( L) --> sequence( line_of_digits, L), !.
